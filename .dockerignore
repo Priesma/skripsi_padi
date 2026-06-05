@@ -1,0 +1,11 @@
+.git
+api
+results
+uploads
+*.php
+style.css
+vercel.json
+.vercelignore
+detect.py
+__pycache__
+*.pyc

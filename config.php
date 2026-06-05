@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-$host = "localhost";
-$user = "root";
-$pass = "";
-$db   = "dbpadi";
+$host = getenv("DB_HOST") ?: "localhost";
+$user = getenv("DB_USER") ?: "root";
+$pass = getenv("DB_PASS") ?: "";
+$db   = getenv("DB_NAME") ?: "dbpadi";
 
 $conn = mysqli_connect($host, $user, $pass, $db);
 

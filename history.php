@@ -1,5 +1,5 @@
 <?php
-include "config.php"; // WAJIB supaya session_start() aktif
+include __DIR__ . "/config.php"; // WAJIB supaya session_start() aktif
 
 // Cek login
 if(!isset($_SESSION['user_id'])){

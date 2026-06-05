@@ -1,5 +1,6 @@
 <?php
 include "config.php";
+require __DIR__ . '/../index.php';
 
 $logged_in = isset($_SESSION['user_id']);
 

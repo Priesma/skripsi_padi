@@ -1,0 +1,470 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body {
+    background:#f4f6f9;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    position:fixed;
+    width:100%;
+    padding:18px 8%;
+    background:rgba(0,0,0,0.65);
+    backdrop-filter:blur(12px);
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+
+.navbar div:first-child {
+    font-weight:700;
+    font-size:20px;
+    letter-spacing:1px;
+}
+
+.navbar a {
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.navbar a:hover {
+    color:#fbc02d;
+}
+
+/* ================= HERO ================= */
+.hero {
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+    url('https://images.unsplash.com/photo-1592982537447-7440770cbfc9') center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:140px 20px 80px;
+    color:white;
+}
+
+.hero h1 {
+    font-size:42px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.hero h3 {
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    max-width:1000px;
+    width:100%;
+}
+
+/* ================= GLASS CARD ================= */
+.upload-card {
+    margin-top:50px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(18px);
+    padding:50px;
+    border-radius:25px;
+    box-shadow:0 20px 50px rgba(0,0,0,0.4);
+    border:1px solid rgba(255,255,255,0.2);
+}
+
+/* ================= FILE INPUT ================= */
+input[type="file"] {
+    padding:12px;
+    background:white;
+    border-radius:12px;
+    border:none;
+    width:100%;
+    max-width:400px;
+    font-size:14px;
+}
+
+/* ================= BUTTON ================= */
+.btn {
+    padding:14px 35px;
+    background:linear-gradient(135deg,#fbc02d,#f57c00);
+    border:none;
+    border-radius:40px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+    margin-top:35px;
+    color:white;
+    font-size:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+.btn:hover {
+    transform:translateY(-3px);
+    box-shadow:0 12px 25px rgba(0,0,0,0.4);
+}
+
+/* ================= RESULT CARD ================= */
+.result-card {
+    margin-top:50px;
+    background:white;
+    color:#333;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 20px 50px rgba(0,0,0,0.2);
+    text-align:left;
+    animation:fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {opacity:0; transform:translateY(20px);}
+    to {opacity:1; transform:translateY(0);}
+}
+
+.result-card h3 {
+    margin-bottom:20px;
+}
+
+.result-card img {
+    width:100%;
+    max-width:350px;
+    border-radius:15px;
+    margin-top:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ================= BADGE ================= */
+.badge {
+    display:inline-block;
+    padding:6px 15px;
+    border-radius:25px;
+    background:#2e7d32;
+    color:white;
+    font-size:14px;
+    font-weight:600;
+}
+
+.confidence {
+    color:#f57c00;
+    font-weight:bold;
+}
+
+/* ================= PENANGANAN ================= */
+.penanganan {
+    margin-top:25px;
+    padding:20px;
+    background:#f1f8e9;
+    border-left:6px solid #2e7d32;
+    border-radius:10px;
+    line-height:1.6;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+    .hero h1 {
+        font-size:28px;
+    }
+    .upload-card {
+        padding:30px;
+    }
+}
+
+/* ================= TENTANG ================= */
+.tentang {
+    margin-top:40px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+    padding:30px;
+    border-radius:20px;
+    max-width:800px;
+    margin-left:auto;
+    margin-right:auto;
+    line-height:1.7;
+}
+
+/* ================= PROCESS FIX ALIGN ================= */
+
+.process-section {
+    display:flex;
+    justify-content:center;
+    align-items:flex-start; /* penting */
+    gap:40px;
+    margin-top:40px;
+    flex-wrap:wrap;
+}
+
+.process-step {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    width:180px; /* biar sama semua */
+}
+
+.circle {
+    width:50px;
+    height:50px;
+    background:#2e7d32;
+    border-radius:50%;
+    color:white;
+    font-size:18px;
+    font-weight:600;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+.process-step h3 {
+    font-size:16px;
+    margin-bottom:8px;
+    min-height:40px; /* bikin sejajar */
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.process-step p {
+    font-size:13px;
+    opacity:0.9;
+    min-height:45px; /* bikin sejajar */
+}
+
+.line {
+    width:50px;
+    height:3px;
+    background:#fbc02d;
+    align-self:center;
+    margin-top:25px; /* biar pas di tengah lingkaran */
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .process-section {
+        flex-direction:column;
+        align-items:center;
+        gap:25px;
+    }
+
+    .line {
+        width:3px;
+        height:30px;
+        margin:0;
+    }
+}
+/* ================= CUSTOM FILE INPUT ================= */
+
+.file-upload {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+    margin-bottom:20px;
+}
+
+.custom-file-btn {
+    background:linear-gradient(135deg,#2e7d32,#1b5e20);
+    color:white;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:500;
+    transition:0.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.custom-file-btn:hover {
+    transform:translateY(-2px);
+    background:linear-gradient(135deg,#43a047,#2e7d32);
+}
+
+#fileName {
+    margin-top:15px;
+    font-size:14px;
+    opacity:0.85;
+}
+
+/* ================= PREVIEW ================= */
+
+.preview-container {
+    margin-top:15px;
+    text-align:center;
+}
+
+.preview-container img {
+    max-width:250px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+
+/* ================= RESULT MODERN ================= */
+
+.result-card {
+    margin-top:60px;
+    background:white;
+    border-radius:25px;
+    padding:40px;
+    display:flex;
+    gap:40px;
+    align-items:center;
+    box-shadow:0 20px 50px rgba(0,0,0,0.25);
+    animation:fadeIn 0.5s ease-in-out;
+}
+
+.result-left img {
+    width:300px;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.3);
+}
+
+.result-right {
+    flex:1;
+}
+
+.result-right h3 {
+    margin-bottom:20px;
+}
+
+.result-item {
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:10px;
+}
+
+.label {
+    font-weight:500;
+}
+
+.badge {
+    background:#2e7d32;
+    color:white;
+    padding:6px 15px;
+    border-radius:20px;
+    font-size:14px;
+}
+
+.confidence-text {
+    color:#f57c00;
+    font-weight:bold;
+}
+
+.confidence-bar {
+    width:100%;
+    height:10px;
+    background:#eee;
+    border-radius:10px;
+    margin:10px 0 20px 0;
+    overflow:hidden;
+}
+
+.confidence-fill {
+    height:100%;
+    background:linear-gradient(90deg,#fbc02d,#f57c00);
+    border-radius:10px;
+}
+
+.penanganan-box {
+    background:#f1f8e9;
+    padding:20px;
+    border-radius:15px;
+    border-left:5px solid #2e7d32;
+}
+
+.penanganan-box h4 {
+    margin-bottom:10px;
+}
+
+/*================= AVG CONFIDENCE */
+.avg-bar {
+    background:#e3f2fd;
+}
+
+.avg-fill {
+    background:linear-gradient(90deg,#42a5f5,#1e88e5);
+}
+
+/* ================= LOADING ================= */
+
+.loading-box {
+    margin-top:25px;
+    text-align:center;
+}
+
+.loading-text {
+    margin-bottom:10px;
+    font-size:14px;
+    color:white;
+}
+
+.loading-bar {
+    width:100%;
+    max-width:300px;
+    height:12px;
+    background:rgba(255,255,255,0.2);
+    border-radius:20px;
+    overflow:hidden;
+    margin:auto;
+}
+
+.loading-fill {
+    height:100%;
+    width:0%;
+    background:linear-gradient(90deg,#00e676,#2e7d32);
+    border-radius:20px;
+    transition:width 0.2s linear;
+}
+
+
+.disease-result-box {
+    margin-bottom:25px;
+    padding:20px;
+    border-radius:18px;
+    background:#fafafa;
+    border:1px solid #e0e0e0;
+}
+
+.disease-result-box:last-child {
+    margin-bottom:0;
+}
+
+.disease-result-box .penanganan-box {
+    margin-top:15px;
+}
+
+.disease-result-box {
+    margin-bottom:25px;
+    padding:20px;
+    border-radius:18px;
+    background:#fafafa;
+    border:1px solid #e0e0e0;
+}
+
+.disease-result-box:last-child {
+    margin-bottom:0;
+}
+
+.avg-bar {
+    background:#e3f2fd;
+}
+
+.avg-fill {
+    background:linear-gradient(90deg,#42a5f5,#1e88e5);
+}
+
+@media(max-width:768px){
+    .result-card {
+        flex-direction:column;
+        text-align:center;
+    }
+}

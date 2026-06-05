@@ -1,9 +1,9 @@
 {
   "$schema": "https://railway.app/railway.schema.json",
   "build": {
-    "buildCommand": "pip install -r backend/requirements.txt"
+    "buildCommand": "python -m pip install --upgrade pip && python -m pip install -r backend/requirements.txt"
   },
   "deploy": {
-    "startCommand": "cd backend && MODEL_PATH=../best.pt uvicorn main:app --host 0.0.0.0 --port $PORT"
+    "startCommand": "cd backend && MODEL_PATH=../best.pt python -m uvicorn main:app --host 0.0.0.0 --port $PORT"
   }
 }
